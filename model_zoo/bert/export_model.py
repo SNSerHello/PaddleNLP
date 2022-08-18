@@ -53,7 +53,40 @@ def main():
     args = parse_args()
 
     args.model_type = args.model_type.lower()
-    model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
+    if args.model_type == "bert":
+        model_class, tokenizer_class = MODEL_CLASSES["bert"]
+        print(
+            r"""
+ ____            _
+| __ )  ___ _ __| |_
+|  _ \ / _ \ '__| __|
+| |_) |  __/ |  | |_
+|____/ \___|_|   \__|
+
+    {}""".format(
+                "\n    ".join(model_class.pretrained_init_configuration.keys())
+            )
+        )
+    elif args.model_type == "ernie":
+        model_class, tokenizer_class = MODEL_CLASSES["ernie"]
+        print(
+            r"""
+ _____            _
+| ____|_ __ _ __ (_) ___
+|  _| | '__| '_ \| |/ _ \
+| |___| |  | | | | |  __/
+|_____|_|  |_| |_|_|\___|
+
+    {}""".format(
+                "\n    ".join(model_class.pretrained_init_configuration.keys())
+            )
+        )
+    else:
+        raise ValueError(
+            "model type only supports: {}, but your model type is {}".format(
+                ",".join(MODEL_CLASSES), args.model_type
+            )
+        )
 
     # build model and load trained parameters
     model = model_class.from_pretrained(args.model_path)
