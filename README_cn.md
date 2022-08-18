@@ -17,6 +17,22 @@
     <a href="https://github.com/PaddlePaddle/PaddleNLP/issues"><img src="https://img.shields.io/github/issues/PaddlePaddle/PaddleNLP?color=9cc"></a>
     <a href="https://github.com/PaddlePaddle/PaddleNLP/stargazers"><img src="https://img.shields.io/github/stars/PaddlePaddle/PaddleNLP?color=ccf"></a>
 </p>
+## 制作Wheel文件
+
+```bash
+pip3 install --upgrade -r requirements.txt
+python3 setup.py bdist_wheel --universal
+cd dist
+pip3 install --upgrade paddlenlp-2.3.0.dev0-py2.py3-none-any.whl
+```
+
+## 生成Bert推断模型文件
+
+```bash
+cd ../model_zoo/bert
+python3 export_model.py --model_type bert --model_path bert-large-uncased --output_path ./bert_infer_model/bert
+```
+
 
 
 ## 制作Wheel文件
