@@ -30,7 +30,7 @@ pip3 install --upgrade paddlenlp-2.3.0.dev0-py2.py3-none-any.whl
 
 ```bash
 cd ../model_zoo/bert
-python3 export_model.py --model_type bert --model_path bert-large-uncased --output_path ./bert_infer_model/bert
+python3 export_model.py --model_type bert --model_path bert-large-uncased --output_path ./bert-large-uncased/inference
 ```
 
 
