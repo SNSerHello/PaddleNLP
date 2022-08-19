@@ -36,13 +36,12 @@ def parse_args():
         default=None,
         type=str,
         required=True,
-        help="Path of the trained model to be exported.",
+        help="Model name or path of the trained model to be exported.",
     )
     parser.add_argument(
         "--output_path",
         default=None,
         type=str,
-        required=True,
         help="The output file prefix used to save the exported inference model.",
     )
     args = parser.parse_args()
@@ -87,8 +86,12 @@ def main():
                 ",".join(MODEL_CLASSES), args.model_type
             )
         )
-    return
 
+    if args.output_path is None:
+        args.output_path = "{}{}inference".format(
+            os.path.abspath(args.model_path), os.path.sep
+        )
+    
     # build model and load trained parameters
     model = model_class.from_pretrained(args.model_path)
     # switch to eval model
