@@ -26,12 +26,22 @@ cd dist
 pip3 install --upgrade paddlenlp-2.3.0.dev0-py2.py3-none-any.whl
 ```
 
+
+
 ## 生成Bert推断模型文件
 
 ```bash
 cd ../model_zoo/bert
 python3 export_model.py --model_type bert --model_path bert-large-uncased --output_path ./bert-large-uncased/inference
 ```
+
+**注**：`./bert-large-uncased/inference`是默认`bert-large-uncased`的生成路径，程序能够根据输如模型自动在当前目录下创建一个新的目录存放生成后的inference模型和参数文件，所以在一般情况下，上面的命令可以简化为
+
+```bash
+python3 export_model.py --model_type bert --model_path bert-large-uncased
+```
+
+
 
 ### Bert支持模型
 
