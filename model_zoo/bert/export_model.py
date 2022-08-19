@@ -87,6 +87,7 @@ def main():
                 ",".join(MODEL_CLASSES), args.model_type
             )
         )
+    return
 
     # build model and load trained parameters
     model = model_class.from_pretrained(args.model_path)
