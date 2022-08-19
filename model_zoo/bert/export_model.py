@@ -86,7 +86,6 @@ def main():
                 ",".join(MODEL_CLASSES), args.model_type
             )
         )
-    return
 
     if args.output_path is None:
         args.output_path = "{}{}inference".format(
