@@ -33,6 +33,67 @@ cd ../model_zoo/bert
 python3 export_model.py --model_type bert --model_path bert-large-uncased --output_path ./bert-large-uncased/inference
 ```
 
+### Bert支持模型
+
+```bash
+ ____            _
+| __ )  ___ _ __| |_
+|  _ \ / _ \ '__| __|
+| |_) |  __/ |  | |_
+|____/ \___|_|   \__|
+
+    bert-base-uncased
+    bert-large-uncased
+    bert-base-multilingual-uncased
+    bert-base-cased
+    bert-base-chinese
+    bert-base-multilingual-cased
+    bert-large-cased
+    bert-wwm-chinese
+    bert-wwm-ext-chinese
+    macbert-base-chinese
+    macbert-large-chinese
+    simbert-base-chinese
+    uer/chinese-roberta-base
+    uer/chinese-roberta-medium
+    uer/chinese-roberta-6l-768h
+    uer/chinese-roberta-small
+    uer/chinese-roberta-mini
+    uer/chinese-roberta-tiny
+```
+
+### Ernie支持模型
+
+```bash
+ _____            _
+| ____|_ __ _ __ (_) ___
+|  _| | '__| '_ \| |/ _ \
+| |___| |  | | | | |  __/
+|_____|_|  |_| |_|_|\___|
+
+    ernie-1.0
+    ernie-1.0-base-zh
+    ernie-1.0-large-zh-cw
+    ernie-tiny
+    ernie-2.0-base-zh
+    ernie-2.0-large-zh
+    ernie-2.0-base-en
+    ernie-2.0-base-en-finetuned-squad
+    ernie-2.0-large-en
+    rocketqa-zh-dureader-query-encoder
+    rocketqa-zh-dureader-para-encoder
+    rocketqa-v1-marco-query-encoder
+    rocketqa-v1-marco-para-encoder
+    rocketqa-zh-dureader-cross-encoder
+    rocketqa-v1-marco-cross-encoder
+    ernie-3.0-xbase-zh
+    ernie-3.0-base-zh
+    ernie-3.0-medium-zh
+    ernie-3.0-mini-zh
+    ernie-3.0-micro-zh
+    ernie-3.0-nano-zh
+```
+
 
 
 ## 制作Wheel文件
