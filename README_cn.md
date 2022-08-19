@@ -41,6 +41,8 @@ python3 export_model.py --model_type bert --model_path bert-large-uncased --outp
 python3 export_model.py --model_type bert --model_path bert-large-uncased
 ```
 
+**注**：`model_path`的名字不够好，最好应该换成`model_name_or_path`更加的贴切，因为直接修改后相关的文档需要全部同步，所以暂时保留它。
+
 
 
 ### Bert支持模型
