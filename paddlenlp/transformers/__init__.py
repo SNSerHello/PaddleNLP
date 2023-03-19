@@ -45,6 +45,8 @@ from .roberta.tokenizer import *
 from .roberta.configuration import *
 from .electra.modeling import *
 from .electra.tokenizer import *
+from .electra.configuration import *
+from .albert.configuration import *
 from .albert.modeling import *
 from .albert.tokenizer import *
 from .bit.modeling import *
@@ -55,9 +57,11 @@ from .bart.tokenizer import *
 from .bart.configuration import *
 from .bert_japanese.tokenizer import *
 from .bigbird.modeling import *
+from .bigbird.configuration import *
 from .bigbird.tokenizer import *
 from .blenderbot.modeling import *
 from .blenderbot.tokenizer import *
+from .blenderbot.configuration import *
 from .blenderbot_small.modeling import *
 from .blenderbot_small.tokenizer import *
 from .blip.modeling import *
@@ -84,9 +88,11 @@ from .ernie_ctm.modeling import *
 from .ernie_ctm.tokenizer import *
 from .ernie_doc.modeling import *
 from .ernie_doc.tokenizer import *
+from .ernie_doc.configuration import *
 from .ernie_gen.modeling import ErnieForGeneration
 from .ernie_gram.modeling import *
 from .ernie_gram.tokenizer import *
+from .ernie_gram.configuration import *
 from .ernie_layout.modeling import *
 from .ernie_layout.tokenizer import *
 from .ernie_layout.configuration import *
@@ -133,6 +139,7 @@ from .rembert.tokenizer import *
 from .roformer.modeling import *
 from .roformer.tokenizer import *
 from .semantic_search.modeling import *
+from .skep.configuration import *
 from .skep.modeling import *
 from .skep.tokenizer import *
 from .squeezebert.modeling import *
@@ -157,14 +164,18 @@ from .unimo.tokenizer import *
 from .unimo.configuration import *
 from .xlnet.modeling import *
 from .xlnet.tokenizer import *
+from .xlnet.configuration import *
 from .xlm.modeling import *
 from .xlm.tokenizer import *
+from .xlm.configuration import *
 from .gau_alpha.modeling import *
 from .gau_alpha.tokenizer import *
 from .gau_alpha.configuration import *
 from .roformerv2.modeling import *
 from .roformerv2.tokenizer import *
+from .roformerv2.configuration import *
 from .optimization import *
+from .opt.configuration import *
 from .opt.modeling import *
 from .auto.modeling import *
 from .auto.tokenizer import *
@@ -174,8 +185,10 @@ from .codegen.tokenizer import *
 from .codegen.configuration import *
 from .artist.modeling import *
 from .artist.tokenizer import *
+from .artist.configuration import *
 from .dallebart.modeling import *
 from .dallebart.tokenizer import *
+from .dallebart.configuration import *
 from .clip.modeling import *
 from .clip.configuration import *
 from .clip.feature_extraction import *
@@ -190,8 +203,12 @@ from .chineseclip.image_processing import *
 from .chineseclip.tokenizer import *
 from .gptj.modeling import *
 from .gptj.tokenizer import *
+from .gptj.configuration import *
 from .pegasus.modeling import *
 from .pegasus.tokenizer import *
+from .glm.configuration import *
+from .glm.modeling import *
+from .glm.tokenizer import *
 from .auto.configuration import *
 from .nystromformer.configuration import *
 from .nystromformer.modeling import *
@@ -201,7 +218,9 @@ from .nystromformer.tokenizer import *
 from ..utils.import_utils import is_fast_tokenizer_available
 
 if is_fast_tokenizer_available():
+    from .tokenizer_utils_fast import PretrainedFastTokenizer
     from .bert.fast_tokenizer import *
     from .ernie.fast_tokenizer import *
     from .tinybert.fast_tokenizer import *
     from .ernie_m.fast_tokenizer import *
+    from .nystromformer.fast_tokenizer import *
